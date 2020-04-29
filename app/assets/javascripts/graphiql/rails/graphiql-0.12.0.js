@@ -20083,7 +20083,7 @@ module.exports={"Aacute":"\u00C1","aacute":"\u00E1","Abreve":"\u0102","abreve":"
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- * 
+ *
  */
 
 function makeEmptyFunction(arg) {
@@ -20265,7 +20265,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                                                                                                                                            *  This source code is licensed under the license found in the
                                                                                                                                                            *  LICENSE file in the root directory of this source tree.
                                                                                                                                                            *
-                                                                                                                                                           *  
+                                                                                                                                                           *
                                                                                                                                                            */
 
 var FRAGMENT_DEFINITION = _graphql.Kind.FRAGMENT_DEFINITION,
@@ -20665,7 +20665,7 @@ function getDefinitionState(tokenState) {
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 function getFieldDef(schema, type, fieldName) {
@@ -20825,7 +20825,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                                                                                                                                                                                                                                                                    *  This source code is licensed under the license found in the
                                                                                                                                                                                                                                                                    *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                    *
-                                                                                                                                                                                                                                                                   *  
+                                                                                                                                                                                                                                                                   *
                                                                                                                                                                                                                                                                    */
 
 exports.getAutocompleteSuggestions = getAutocompleteSuggestions;
@@ -21374,7 +21374,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 var LANGUAGE = exports.LANGUAGE = 'GraphQL';
@@ -21540,7 +21540,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 var SEVERITY = exports.SEVERITY = {
@@ -21677,7 +21677,7 @@ var _graphql = require('graphql');
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 /**
@@ -21845,7 +21845,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                                                                                                                                                                                                                                                                    *  This source code is licensed under the license found in the
                                                                                                                                                                                                                                                                    *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                    *
-                                                                                                                                                                                                                                                                   *  
+                                                                                                                                                                                                                                                                   *
                                                                                                                                                                                                                                                                    */
 
 exports.getOutline = getOutline;
@@ -22235,7 +22235,7 @@ var CharacterStream = function () {
       *  This source code is licensed under the license found in the
       *  LICENSE file in the root directory of this source tree.
       *
-      *  
+      *
       */
 
 /**
@@ -22276,7 +22276,7 @@ function opt(ofRule) {
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 // These functions help build matching rules for ParseRules.
@@ -22336,7 +22336,7 @@ var _RuleHelpers = require('./RuleHelpers');
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 var isIgnored = exports.isIgnored = function isIgnored(ch) {
@@ -22625,7 +22625,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                                                                                                                                                                                                                                                                    *  This source code is licensed under the license found in the
                                                                                                                                                                                                                                                                    *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                    *
-                                                                                                                                                                                                                                                                   *  
+                                                                                                                                                                                                                                                                   *
                                                                                                                                                                                                                                                                    */
 
 /**
@@ -22926,7 +22926,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
  *
- *  
+ *
  */
 
 var Range = exports.Range = function () {
@@ -23037,7 +23037,7 @@ function getASTNodeAtPosition(query, ast, point) {
    *  This source code is licensed under the license found in the
    *  LICENSE file in the root directory of this source tree.
    *
-   *  
+   *
    */
 
 function pointToOffset(text, point) {
@@ -23166,7 +23166,7 @@ function validateWithCustomRules(schema, ast, customRules, isRelayCompatMode) {
    *  This source code is licensed under the license found in the
    *  LICENSE file in the root directory of this source tree.
    *
-   *  
+   *
    */
 },{"graphql":97,"graphql/validation/rules/ExecutableDefinitions":158,"graphql/validation/rules/KnownFragmentNames":163,"graphql/validation/rules/NoUnusedFragments":168}],87:[function(require,module,exports){
 'use strict';
@@ -35387,6 +35387,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * of the server context, for instance when doing schema comparisons.
  */
 function introspectionFromSchema(schema, options) {
+  debugger
   var queryAST = (0, _parser.parse)((0, _introspectionQuery.getIntrospectionQuery)(options));
   var result = (0, _execute.execute)(schema, queryAST);
   !(!result.then && !result.errors && result.data) ? (0, _invariant2.default)(0) : void 0;
