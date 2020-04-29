@@ -2138,7 +2138,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
     value: function _fetchSchema() {
       var _this4 = this;
 
-      var fetcher = this.props.fetcherDocument;
+      var fetcher = this.props.environment === 'production' ? this.props.fetcherDocument : this.props.fetcher;
 
       var fetch = observableToPromise(fetcher({ query: _introspectionQueries.introspectionQuery }));
       if (!isPromise(fetch)) {

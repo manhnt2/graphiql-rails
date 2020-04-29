@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   // Render <GraphiQL /> into the body.
-  var element_props = { fetcher: graphQLFetcher, fetcherDocument: graphQLFetcherDocument, defaultQuery: defaultQuery };
+  var element_props = { fetcher: graphQLFetcher, fetcherDocument: graphQLFetcherDocument, defaultQuery: defaultQuery, environment: graphiqlContainer.dataset.environment };
 
   if (queryParams === 'true') {
     queryParams = Object.assign({}, queryParams, { query: parameters.query, variables: parameters.variables, onEditQuery: onEditQuery, onEditVariables: onEditVariables });
