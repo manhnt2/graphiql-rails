@@ -66,6 +66,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
   }
 
+  // Defines a GraphQL fetcher using the fetch API.
+  function graphQLFetcherDocument() {
+    return fetch('/schema.json', {
+      method: 'get',
+      headers: JSON.parse(graphiqlContainer.dataset.headers),
+      credentials: 'include',
+    }).then(function(response) {
+      try {
+        return response.json();
+      } catch(error) {
+        return {
+          "status": response.status,
+          "message": "The server responded with invalid JSON, this is probably a server-side error",
+          "response": response.text(),
+        };
+      }
+    })
+  }
+
   var initial_query = graphiqlContainer.dataset.initialQuery;
 
   if (initial_query) {
@@ -76,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   // Render <GraphiQL /> into the body.
-  var element_props = { fetcher: graphQLFetcher, defaultQuery: defaultQuery };
+  var element_props = { fetcher: graphQLFetcher, fetcherDocument: graphQLFetcherDocument, defaultQuery: defaultQuery };
 
   if (queryParams === 'true') {
     queryParams = Object.assign({}, queryParams, { query: parameters.query, variables: parameters.variables, onEditQuery: onEditQuery, onEditVariables: onEditVariables });
